@@ -17,7 +17,7 @@ function Property({ property: { coverPhoto, price, rentFrequency, rooms, title, 
                 <Image src={coverPhoto ? coverPhoto.url : DefaultImage} width={400} height={260} alt="house" />
             </Box>
             <Box w="full">
-                <Flex paddingTop="2" alignCenter="center" justifyContent="space-between">
+                <Flex paddingTop="2" alignItems="center" justifyContent="space-between">
                     <Flex alignItems="center">
                         <Box paddingRight="3" color="green.400">
                             {isVerified && <GoVerified />}
