@@ -51,7 +51,10 @@ function search({ properties }) {
 export default search
 
 // NextJS has two forms of pre-rendering: (1) Static Generation, (2) Server-side Rendering
-// 
+// Static Generation - getStaticProps (fetch data at build time)
+//                   - getStaticPaths (dynamic pre-render pages based on routing)
+// SSR - getServerSideProps (fetch data on each request)
+
 export async function getServerSideProps({ query }) {
   const purpose = query.purpose || 'for-rent';
   const rentFrequency = query.rentFrequency || 'yearly';
