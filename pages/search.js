@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { Flex, Box, Text, Icon } from '@chakra-ui/react';
@@ -10,7 +9,7 @@ import Property from '../components/Property';
 import noresult from '../assets/images/noresult.svg';
 import { baseUrl, fetchApi } from '../utils/fetchApi';
 
-function search({ properties }) {
+function Search({ properties }) {
     const [searchFilters, setSearchFilters] = useState(false);
     const router = useRouter();
 
@@ -48,7 +47,7 @@ function search({ properties }) {
     )
 }
 
-export default search
+export default Search
 
 // NextJS has two forms of pre-rendering: (1) Static Generation, (2) Server-side Rendering
 // Static Generation - getStaticProps (fetch data at build time)
